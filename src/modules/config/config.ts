@@ -1,0 +1,1 @@
+export default __SNOWPACK_ENV__
