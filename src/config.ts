@@ -1,6 +1,8 @@
 export const routes = [
-    { label: 'Pokemons', to: '/' },
-    { label: 'Info', to: '/info' },
+    { label: 'General', to: '/' },
+    { label: 'Pokemon', to: '/pokemon' },
+    { label: 'News', to: '/news' },
+    { label: 'Comunity', to: '/comunity' },
 ]
 
 const config = {

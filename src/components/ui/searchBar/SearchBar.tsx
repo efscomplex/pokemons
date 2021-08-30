@@ -3,13 +3,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 const SearchBar = () => {
-    const { value, onChange } = useContainer()
+    const { search, onChangeSearch } = useContainer()
 
     return (
         <div>
             <Input
-                value={value}
-                onChange={onChange}
+                value={search}
+                onChange={onChangeSearch}
                 type="text"
                 placeholder="search for pokemons"
             />

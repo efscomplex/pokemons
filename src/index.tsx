@@ -1,13 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import createReactApp from '@/modules/react/createReactApp'
 import App from './App'
+import React from 'react'
 
-ReactDOM.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
-    document.getElementById('root'),
-)
+createReactApp(<App />)
 
 if (import.meta.hot) {
     import.meta.hot.accept()

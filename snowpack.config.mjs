@@ -21,4 +21,11 @@ export default {
         ui: './src/components/ui',
     },
     env,
+    routes: [
+        {
+            match: 'routes',
+            src: '.*',
+            dest: '/index.html',
+        },
+    ],
 }
