@@ -2,6 +2,7 @@ import Card from '@/components/containers/pokemons/pokeCard/Card'
 import type { Pokemon } from '@/components/containers/pokemons/Pokemons'
 import React from 'react'
 import styled from 'styled-components'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 type ListProps = {
     pokemons: Pokemon[]
@@ -10,11 +11,20 @@ type ListProps = {
 
 const PokemonList: React.FC<ListProps> = ({ pokemons, onClickCard }) => {
     return (
-        <List>
-            {pokemons.map((pokemon, i) => (
-                <Card pokemon={pokemon} key={i} onClick={onClickCard} />
-            ))}
-        </List>
+        <TransitionGroup>
+            <List>
+                {pokemons.map((pokemon, i) => (
+                    <CSSTransition
+                        key={i}
+                        timeout={500}
+                        classNames="example"
+                        appear={true}
+                    >
+                        <Card pokemon={pokemon} key={i} onClick={onClickCard} />
+                    </CSSTransition>
+                ))}
+            </List>
+        </TransitionGroup>
     )
 }
 

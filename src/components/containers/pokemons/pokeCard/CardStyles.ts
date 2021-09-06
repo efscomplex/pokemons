@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const Card = styled('div')`
     gap: 1rem;
-    animation: fade 0.4s ease-in-out;
-    transition: transform ease-in-out 0.3s;
+    // animation: fade 0.4s ease-in-out;
+    transition: transform ease-in-out 3s;
     position: relative;
     .title {
         text-align: right;

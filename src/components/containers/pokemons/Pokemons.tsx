@@ -6,6 +6,8 @@ import { useContainer } from '@/services/providers/ContainerContext'
 import { Clients } from '@/types/Clients'
 import React, { useEffect, useMemo } from 'react'
 import { useLocation } from 'wouter'
+import { TransitionGroup } from 'react-transition-group'
+import styled from 'styled-components'
 
 export type Pokemon = {
     url: string
@@ -40,5 +42,4 @@ const Pokemons: React.FC<PokeProps> = ({ initialData }) => {
 
     return <PokemonList pokemons={pokemons} onClickCard={onClickCard} />
 }
-
 export default asLazy<PokeProps>(Pokemons, Clients.POKEMON, pokemonsQuery)
